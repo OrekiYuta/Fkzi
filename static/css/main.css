@@ -1,0 +1,131 @@
+body,div{
+    /*background: #333;*/
+    background: white;
+    margin: 0px;
+}
+#retain{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    top: 0;
+    left: 0%;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#title{
+    position: absolute;
+    width: 40%;
+    height: 10%;
+    top: 0;
+    left: 30%;
+    color: black;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#time{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    top: 0;
+    left: 0%;
+    color: black;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#m1{
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    top: 10%;
+    left: 30%;
+}
+.num_1{
+    width: 25%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gold;
+    font-size: 35px;
+}
+.txt_1{
+    width: 25%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    font-size: 25px;
+    font-family: "幼圆";
+
+}
+
+.num_2{
+    width: 30%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gold;
+    font-size: 35px;
+}
+.txt_2{
+    width: 30%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    font-size: 25px;
+    font-family: "幼圆";
+
+}
+
+
+#m2{
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    top: 30%;
+    left: 30%;
+     background: #333;
+}
+
+#l1{
+    position: absolute;
+    width: 30%;
+    height: 45%;
+    top: 10%;
+    left: 0%;
+}
+#l2{
+    position: absolute;
+    width: 30%;
+    height: 45%;
+    top: 55%;
+    left: 0%;
+}
+#r1{
+    position: absolute;
+    width: 30%;
+    height: 60%;
+    top: 3%;
+    right: 0%;
+}
+#r2{
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    top: 63%;
+    right: 0%;
+}
