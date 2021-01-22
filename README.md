@@ -1,2 +1,2 @@
 # FkZi
-Daily monitoring of epidemic situation
+Daily epidemic surveillance

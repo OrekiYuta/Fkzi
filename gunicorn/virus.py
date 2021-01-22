@@ -105,7 +105,6 @@ def db_close(conn, cursor):
 
 
 def db_connect(dbType):
-
     if dbType == "mariadb":
         try:
             conn = mariadb.connect(
@@ -261,7 +260,7 @@ def sogou_hotSearch():
     options.add_argument("--no-sandbox")  # linux 需要禁用这个
     options.add_argument("--disable-gpu")
     options.add_argument('blink-settings=imagesEnabled=false')  # 不加载图片资源
-    # chrome = Chrome(executable_path="./chromedriver.exe", options=options) # 路径加载驱动
+    # chrome = Chrome(executable_path="/usr/local/bin/chromedriver", options=options)  # 路径加载驱动
     chrome = Chrome(options=options)
     chrome.get(url)
     chrome.implicitly_wait(5)  # 等待加载
