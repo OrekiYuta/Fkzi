@@ -1,8 +1,8 @@
-## FkZi
+## Fkzi
 Daily epidemic surveillance
 
 display on 👉 http://elias.orekiyuta.cn/
-### interface
+### Interface
 - https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5
 - https://sa.sogou.com/new-weball/page/sgs/epidemic?type_page=VR
 - http://top.baidu.com/buzz?b=1&fr=topindex
