@@ -1,7 +1,8 @@
 ## Fkzi
 Daily epidemic surveillance
 
-display on 👉 http://elias.orekiyuta.cn/
+Display on 👉 http://virus.orekiyuta.cn/
+
 ### Interface
 - https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5
 - https://sa.sogou.com/new-weball/page/sgs/epidemic?type_page=VR
@@ -9,11 +10,11 @@ display on 👉 http://elias.orekiyuta.cn/
 - https://www.qq.com/
 
 ### Usage
-0. git clone 
-0. build database from db/virus.sql
-0. run 
+1. Git clone 
+0. Build database from db/virus.sql
+0. Run 
     - cd to project root
     - `gunicorn -b 127.0.0.1:5000 -D app:app`
-0. configure nginx
-0. finally, set the corntab
-- read more , to https://www.orekiyuta.cn/archives/reptilesAndRaspberries/
+0. Configure nginx
+0. Finally, set the corntab
+- Read more , to https://www.orekiyuta.cn/archives/reptilesAndRaspberries/
