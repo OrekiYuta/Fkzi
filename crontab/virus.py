@@ -263,7 +263,7 @@ def sogou_hotSearch():
     # chrome = Chrome(executable_path="/usr/local/bin/chromedriver", options=options)  # 路径加载驱动
     chrome = Chrome(options=options)
     chrome.get(url)
-    chrome.implicitly_wait(5)  # 等待加载
+    chrome.implicitly_wait(20)  # 等待加载
     # print(chrome.find_elements_by_xpath('//*[@id="no_active_pane"]/div/div/div[2]/ul/li'))
     # ul = chrome.find_element_by_class_name("list-fh")
     el_lis = chrome.find_elements_by_xpath('//*[@id="no_active_pane"]/div/div/div[2]/ul/li')
