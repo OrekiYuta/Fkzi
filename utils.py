@@ -28,11 +28,10 @@ def db_connect(dbType):
     elif dbType == "mysql":
         try:
             conn = pymysql.connect(
-                user="root",
-                password="orekiyuta22!",
-                host="sh-cdb-6ixevy3u.sql.tencentcdb.com",
-                port=59884,
-                database="virus"
+                password="#####",
+                host="@###",
+                port=3902,
+                database="eas"
             )
             cursor = conn.cursor()
             return conn, cursor
