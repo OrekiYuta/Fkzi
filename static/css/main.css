@@ -16,6 +16,7 @@ body,div{
     justify-content: center;
 
 }
+
 #title{
     position: absolute;
     width: 40%;
@@ -28,15 +29,38 @@ body,div{
     align-items: center;
     justify-content: center;
 }
-
-#time{
+#sum{
     position: absolute;
     width: 30%;
-    height: 10%;
+    height: 2%;
     top: 0;
     left: 0%;
     color: black;
-    font-size: 20px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#runtime{
+    position: absolute;
+    width: 30%;
+    height: 3%;
+    top: 3%;
+    left: 0%;
+    color: black;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#time{
+    position: absolute;
+    width: 30%;
+    height: 5%;
+    top: 6%;
+    left: 0%;
+    color: black;
+    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;

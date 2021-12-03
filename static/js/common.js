@@ -1,14 +1,21 @@
 function getTime() {
-    $.ajax({
-        url:"getTime",
-        timeout:10000,
-        success:function (data) {
-              $("#time").html(data)
-        },
-        error:function (x) {
+    // $.ajax({
+    //     url:"getTime",
+    //     timeout:10000,
+    //     success:function (data) {
+    //           $("#time").html(data)
+    //     },
+    //     error:function (x) {
+    //
+    //     }
+    // })
+}
 
-        }
-    })
+function getYear(){
+    const date = new Date();
+    $("title").text(date.getFullYear()+"年全国疫情实时监控");
+    $("#title").text(date.getFullYear()+"年全国疫情实时监控");
+    $("#time").html("现在的时间是: "+date.toLocaleString())
 }
 
 function getDailyData(){
@@ -76,7 +83,7 @@ function get_leftBottom_data(){
 
 function get_rightTop_data(){
       $.ajax({
-        url: "/getConfrimUntilNow",
+        url: "/getConfirmUntilNow",
         success:function (data) {
             right_top_option.legend.data = data.provinces;
             right_top_option.series[0].data = data.provinceConfrim;
@@ -100,19 +107,46 @@ function get_rightBottom_data(){
         }
     })
 }
+function getDataCount(){
+      $.ajax({
+        url: "/getDataCount",
+        success:function (data) {
+            $("#sum").text("本站点累计数据已达: "+data.count);
+        },
+        error:function (x) {
+        }
+    })
+}
+
+
+
+function ShowRunTime(id) {
+    const BootDate = new Date("2021/01/01 00:00:00");
+    const NowDate = new Date();
+    const RunDateM = parseInt(NowDate - BootDate);
+    const RunDays = Math.floor(RunDateM/(24*3600*1000));
+    const RunHours = Math.floor(RunDateM%(24*3600*1000)/(3600*1000));
+    const RunMinutes = Math.floor(RunDateM%(24*3600*1000)%(3600*1000)/(60*1000));
+    const RunSeconds = Math.round(RunDateM%(24*3600*1000)%(3600*1000)%(60*1000)/1000);
+    const RunTime = RunDays + "天" + RunHours + "时" + RunMinutes + "分" + RunSeconds + "秒";
+    document.getElementById(id).innerHTML = "本站点累计运行：" + RunTime;
+}
+
+getYear()
 getDailyData()
 getAreaData()
 get_leftTop_data()
 get_rightTop_data()
 get_leftBottom_data()
 get_rightBottom_data()
+getDataCount()
 
-
-setInterval(getTime,1000)
+setInterval("ShowRunTime('runtime')", 1000);
+setInterval(getYear,1000)
 //1个小时更新一次页面数据
 setInterval(getDailyData,3600000)
 setInterval(get_leftTop_data,3600000)
 setInterval(get_rightTop_data,3600000)
 setInterval(get_leftBottom_data,3600000)
 setInterval(get_rightBottom_data,3600000)
-
+setInterval(getDataCount,3600000)

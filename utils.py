@@ -10,7 +10,6 @@ def get_time():
 
 
 def db_connect(dbType):
-
     if dbType == "mariadb":
         try:
             conn = mariadb.connect(
@@ -29,11 +28,11 @@ def db_connect(dbType):
     elif dbType == "mysql":
         try:
             conn = pymysql.connect(
-                user="els",
-                password="#####",
-                host="@###",
-                port=3902,
-                database="eas"
+                user="root",
+                password="orekiyuta22!",
+                host="sh-cdb-6ixevy3u.sql.tencentcdb.com",
+                port=59884,
+                database="virus"
             )
             cursor = conn.cursor()
             return conn, cursor
@@ -112,7 +111,7 @@ def get_todayNewConfrim_data():
 
 
 # 目前各省市累计确诊数
-def get_confrimUntilNow():
+def get_confirmUntilNow():
     sql = "select province_name_,sum(city_total_confirm_),lastUpdateTime " \
           "from tencent_virus_data where lastUpdateTime = ( " \
           "select lastUpdateTime from tencent_virus_data " \
@@ -128,3 +127,14 @@ def get_hotPoint():
     sql = "select content,setDataTime from  hotpoint order by id desc limit 50"
     res = query(sql)
     return res
+
+
+# 统计所有采集数据量
+def get_total_data_count():
+    d = "select count(*) from daily_data"
+    t = "select count(1) from tencent_virus_data"
+    h = "select count(0) from hotpoint"
+    r_d = query(d)
+    r_t = query(t)
+    r_h = query(h)
+    return r_d,r_t,r_h

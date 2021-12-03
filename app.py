@@ -88,9 +88,9 @@ def get_todayNewConfrim_data():
                     "province_city": province_city})
 
 
-@app.route("/getConfrimUntilNow")
-def get_confrimUntilNow_data():
-    cUN_data = utils.get_confrimUntilNow()
+@app.route("/getConfirmUntilNow")
+def get_confirmUntilNow_data():
+    cUN_data = utils.get_confirmUntilNow()
     provinces = []
     setDateTime = ""
     provinceConfrim = []
@@ -130,6 +130,14 @@ def get_hotPoint_data():
     # print(keywords)
     return jsonify({"keywords": keywords,
                     "setDataTime": setDataTime})
+
+
+@app.route("/getDataCount")
+def get_total_data_Count():
+    r1, r2, r3 = utils.get_total_data_count()
+    count = int(r1[0][0]) + int(r2[0][0]) + int(r3[0][0])
+
+    return jsonify({"count": format(count, ",")})
 
 
 if __name__ == '__main__':
