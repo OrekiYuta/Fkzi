@@ -20,7 +20,7 @@ function getYear(){
 
 function getDailyData(){
     $.ajax({
-        url: "/getDailyData",
+        url: "/epidemic/getDailyData",
         success:function (data) {
             $("#today_confirm").text(data.today_confirm);
             $("#total_nowConfirm").text(data.total_nowConfirm);
@@ -38,7 +38,7 @@ function getDailyData(){
 
 function getAreaData(){
     $.ajax({
-        url: "/getAreaData",
+        url: "/epidemic/getAreaData",
         success:function (data) {
             center_option.series[0].data=data.data;
             center.setOption(center_option);
@@ -51,7 +51,7 @@ function getAreaData(){
 
 function get_leftTop_data(){
       $.ajax({
-        url: "/getGeneralTrend",
+        url: "/epidemic/getGeneralTrend",
         success:function (data) {
             left_top_option.xAxis.data = data.setDataTime;
             left_top_option.series[0].data = data.today_confirm;
@@ -69,7 +69,7 @@ function get_leftTop_data(){
 
 function get_leftBottom_data(){
       $.ajax({
-        url: "/getTodayNewConfrim",
+        url: "/epidemic/getTodayNewConfrim",
         success:function (data) {
             left_bottom_option.yAxis[0].data = data.province_city;
             left_bottom_option.series[0].data = data.city_today_confirm_;
@@ -83,7 +83,7 @@ function get_leftBottom_data(){
 
 function get_rightTop_data(){
       $.ajax({
-        url: "/getConfirmUntilNow",
+        url: "/epidemic/getConfirmUntilNow",
         success:function (data) {
             right_top_option.legend.data = data.provinces;
             right_top_option.series[0].data = data.provinceConfrim;
@@ -97,7 +97,7 @@ function get_rightTop_data(){
 
 function get_rightBottom_data(){
       $.ajax({
-        url: "/getHotPoint",
+        url: "/epidemic/getHotPoint",
         success:function (data) {
             right_bottom_option.series[0].data = data.keywords;
             right_bottom_option.title.text= "今日热点关键词  "+ data.setDataTime;
@@ -109,7 +109,7 @@ function get_rightBottom_data(){
 }
 function getDataCount(){
       $.ajax({
-        url: "/getDataCount",
+        url: "/epidemic/getDataCount",
         success:function (data) {
             $("#sum").text("本站点累计数据已达: "+data.count);
         },
