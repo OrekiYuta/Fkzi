@@ -16,5 +16,6 @@ Daily epidemic surveillance
     - `gunicorn -b 127.0.0.1:5000 -D app:app` Configure nginx
     - `gunicorn -b 0.0.0.0:5000 -D app:app` Without nginx
   
-1. Configure nginx0. Finally, set the corntab
+0. Configure nginx
+0. Finally, set the corntab
 - Read more , to https://www.orekiyuta.cn/archives/reptilesAndRaspberries/
