@@ -24,8 +24,8 @@ function getDailyData(){
         success:function (data) {
             $("#today_confirm").text(data.today_confirm);
             $("#total_nowConfirm").text(data.total_nowConfirm);
-            $("#total_deadRate").text(data.total_deadRate);
-            $("#total_healRate").text(data.total_healRate);
+            //$("#total_deadRate").text(data.total_deadRate);
+            //$("#total_healRate").text(data.total_healRate);
             $("#total_confirm").text(data.total_confirm);
             $("#total_dead").text(data.total_dead);
             $("#total_heal").text(data.total_heal);
