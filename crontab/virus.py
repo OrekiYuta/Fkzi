@@ -47,8 +47,11 @@ def get_tencent_virus_data():
     # print(total)
 
     # 今日确诊，目前确诊，总确诊，总死亡数，总死亡概率，总康复数，总康复概率
-    daily_data = [name, today["confirm"], total["nowConfirm"], total["confirm"], total["dead"], total["deadRate"],
-                  total["heal"], total["healRate"]]
+    # daily_data = [name, today["confirm"], total["nowConfirm"], total["confirm"], total["dead"], total["deadRate"],
+    #                   total["heal"], total["healRate"]]
+
+    daily_data = [name, today["confirm"], total["nowConfirm"], total["confirm"], total["dead"], "",
+                      total["heal"], ""]
 
     today_details = []
     for province in provinces:
@@ -63,12 +66,12 @@ def get_tencent_virus_data():
             city_today_confirm_ = city["today"]["confirm"]  # 该城市今日确诊
             city_total_confirm_ = city["total"]["confirm"]  # 该城市总确诊
             city_total_heal_ = city["total"]["heal"]  # 该城市总康复
-            city_total_heal_rate_ = city["total"]["healRate"]  # 该城市总康复概率
+            #city_total_heal_rate_ = city["total"]["healRate"]  # 该城市总康复概率
             city_total_dead_ = city["total"]["dead"]  # 该城市总死亡
-            city_total_dead_rate_ = city["total"]["deadRate"]  # 该城市总死亡概率
+            #city_total_dead_rate_ = city["total"]["deadRate"]  # 该城市总死亡概率
             today_details.append([lastUpdateTime, province_name_, city_name_, city_today_confirm_,
-                                  city_total_confirm_, city_total_heal_, city_total_heal_rate_,
-                                  city_total_dead_, city_total_dead_rate_
+                                  city_total_confirm_, city_total_heal_, "",
+                                  city_total_dead_, ""
                                   ])
 
     return today_details, daily_data
