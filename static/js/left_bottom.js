@@ -30,6 +30,22 @@ var left_bottom_option = {
             type: 'value',
         }
     ],
+    dataZoom: [
+        {
+            type: 'slider',
+            show: true,
+            yAxisIndex: [0],
+            left: '93%',
+            start: 100, //数据窗口范围的起始百分比
+            end: 36
+        },
+        {
+            type: 'inside',
+            yAxisIndex: [0],
+            start: 0,
+            end: 36
+        }
+    ],
     series: [
         {
             name: '',

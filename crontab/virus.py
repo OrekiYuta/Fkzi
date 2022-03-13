@@ -50,8 +50,8 @@ def get_tencent_virus_data():
     # daily_data = [name, today["confirm"], total["nowConfirm"], total["confirm"], total["dead"], total["deadRate"],
     #                   total["heal"], total["healRate"]]
 
-    daily_data = [name, today["confirm"], total["nowConfirm"], total["confirm"], total["dead"], "",
-                      total["heal"], ""]
+    daily_data = [name, today["confirm"], total["nowConfirm"], total["confirm"], total["dead"], "04.25",
+                      total["heal"], "90.86"]
 
     today_details = []
     for province in provinces:
