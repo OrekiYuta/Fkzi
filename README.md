@@ -18,4 +18,4 @@ Daily epidemic surveillance
   
 0. Configure nginx
 0. Finally, set the corntab
-- Read more , to https://www.orekiyuta.cn/archives/reptilesAndRaspberries/
+- Read more , to https://canoe.orekiyuta.cn/archives/reptilesAndRaspberries/
